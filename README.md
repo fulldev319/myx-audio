@@ -1,4 +1,4 @@
-# MYX app
+# MYX Front-end app
 
 ## Installation and Running
 
@@ -109,6 +109,12 @@ ATTENTION! 'sergi' is an example. Please use your branch and not Sergi's one ðŸ˜
 
 ## Testing
 
+Tests TBD
+
 ```sh
 $ yarn test
 ```
+
+## Technical Considerations
+
+TBD
