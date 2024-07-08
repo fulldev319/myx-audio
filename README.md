@@ -109,12 +109,6 @@ ATTENTION! 'sergi' is an example. Please use your branch and not Sergi's one ðŸ˜
 
 ## Testing
 
-Tests TBD
-
 ```sh
 $ yarn test
 ```
-
-## Technical Considerations
-
-TBD
