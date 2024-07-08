@@ -1,0 +1,12 @@
+diff --git a/node_modules/@ffmpeg/ffmpeg/src/index.d.ts b/node_modules/@ffmpeg/ffmpeg/src/index.d.ts
+index 5d0b749..87ebcc8 100644
+--- a/node_modules/@ffmpeg/ffmpeg/src/index.d.ts
++++ b/node_modules/@ffmpeg/ffmpeg/src/index.d.ts
+@@ -1,6 +1,7 @@
+ export const FS: {
+     writeFile: (fileName: string, binaryData: Uint8Array) => void,
+     readFile: (fileName: string) => Uint8Array,
++    readdir: (fileName: string) => string[],
+     unlink: (fileName: string) => void,
+ }
+ 

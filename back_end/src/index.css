@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'Agrandir';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Agrandir GrandLight'),
+    url(assets/fonts/Agrandir/Agrandir-GrandLight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Agrandir'),
+    url(assets/fonts/Agrandir/Agrandir-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Agrandir Bold'),
+    url(assets/fonts/Agrandir/Agrandir-TextBold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Agrandir HeavyBold'),
+    url(assets/fonts/Agrandir/Agrandir-GrandHeavy.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Variable';
+  src: local('Agrandir Variable'),
+    url(assets/fonts/Agrandir/Agrandir\ Variable.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Grand';
+  src: local('Agrandir Grand'),
+    url(assets/fonts/Agrandir/Agrandir-Grand.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir GrandHeavy';
+  src: local('Agrandir GrandGrandHeavyLight'),
+    url(assets/fonts/Agrandir/Agrandir-GrandHeavy.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir GrandItalic';
+  src: local('Agrandir GrandItalic'),
+    url(assets/fonts/Agrandir/Agrandir-GrandItalic.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir GrandLight';
+  src: local('Agrandir GrandLight'),
+    url(assets/fonts/Agrandir/Agrandir-GrandLight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Italic';
+  src: local('Agrandir Italic'),
+    url(assets/fonts/Agrandir/Agrandir-Italic.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Narrow';
+  src: local('Agrandir Narrow'),
+    url(assets/fonts/Agrandir/Agrandir-Narrow.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir NarrowBlack';
+  src: local('Agrandir NarrowBlack'),
+    url(assets/fonts/Agrandir/Agrandir-NarrowBlack.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Regular';
+  src: local('Agrandir Regular'),
+    url(assets/fonts/Agrandir/Agrandir-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir ThinItalic';
+  src: local('Agrandir ThinItalic'),
+    url(assets/fonts/Agrandir/Agrandir-ThinItalic.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir Tight';
+  src: local('Agrandir Tight'),
+    url(assets/fonts/Agrandir/Agrandir-Tight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir TightBlack';
+  src: local('Agrandir TightBlack'),
+    url(assets/fonts/Agrandir/Agrandir-TightBlack.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir TightThin';
+  src: local('Agrandir TightThin'),
+    url(assets/fonts/Agrandir/Agrandir-TightThin.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir WideBlackItalic';
+  src: local('Agrandir WideBlackItalic'),
+    url(assets/fonts/Agrandir/Agrandir-WideBlackItalic.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir WideLight';
+  src: local('Agrandir WideLight'),
+    url(assets/fonts/Agrandir/Agrandir-WideLight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'),
+    url(assets/fonts/Montserrat/Montserrat-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'),
+    url(assets/fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'),
+    url(assets/fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'),
+    url(assets/fonts/Montserrat/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'),
+    url(assets/fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat HeavyBold'),
+    url(assets/fonts/Montserrat/Montserrat-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram ExtraLight'),
+    url(assets/fonts/Pangram/Pangram-ExtraLight.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram Light'),
+    url(assets/fonts/Pangram/Pangram-Light.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram Regular'),
+    url(assets/fonts/Pangram/Pangram-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram Regular';
+  src: local('Pangram Regular'),
+    url(assets/fonts/Pangram/Pangram-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram Medium'),
+    url(assets/fonts/Pangram/Pangram-Medium.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram Bold'),
+    url(assets/fonts/Pangram/Pangram-Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pangram';
+  src: local('Pangram ExtraBold'),
+    url(assets/fonts/Pangram/Pangram-ExtraBold.otf) format('truetype');
+}
+
+html {
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pangram', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div.exit,
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.promise-loading {
+  position: absolute;
+  background-color: #000000a6;
+  top: 0%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .promise-loading {
+    width: 100vw !important;
+    left: 0 !important;
+  }
+}

@@ -1,0 +1,255 @@
+.podDiscordFullPage.dark {
+  background: transparent;
+  border-radius: 0;
+}
+
+.podDiscordFullPage.dark .podDiscordRoomList {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.podDiscordFullPage.dark .podGroupDiscordRoom {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+.podDiscordFullPage.dark .podDiscordChatGrid {
+  /*max-width: 867px;*/
+  border-right: none;
+  margin-right: 24px;
+  margin-left: 24px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.podDiscordFullPage.dark .podDiscordChat {
+  /*padding: 24px;*/
+}
+
+.podDiscordFullPage.dark .podDiscordRoom {
+  padding: 24px;
+  border: none;
+  margin-bottom: 24px;
+}
+
+.podDiscordFullPage.dark
+  .podGroupDiscordRoom
+  .podDiscordRoom
+  .podDiscordRoomContent
+  .arrow-down
+  img {
+  transform: rotate(270deg);
+}
+
+.podDiscordFullPage.dark .podDiscordRoom .podDiscordRoomContent {
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.podDiscordRoom.dark {
+  margin-left: 0px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.podDiscordRoom.dark .podDiscordGrid.selected .podDiscordRoomList {
+  border: none;
+}
+
+.podDiscordFullPage.dark .podDiscordRoomHeader {
+  color: white;
+  text-transform: capitalize;
+  font-family: Agrandir GrandLight;
+  font-size: 18px;
+}
+
+.podDiscordFullPage.dark .podInputDiscordChat {
+  width: 100%;
+  background: rgba(218, 230, 229, 0.4);
+  /* White */
+  border: 1px solid #dadadb;
+  padding: 7px 16px;
+  border-radius: 8px;
+}
+.podDiscordFullPage.dark .podInputDiscordChat form {
+  width: 100%;
+}
+.podDiscordFullPage.dark .podInputDiscordChat input {
+  background: transparent;
+  width: 100%;
+  box-shadow: none;
+  color: #2d3047;
+  font-size: 14px;
+  padding: 0;
+}
+
+.podDiscordFullPage.dark .podIconImgDiscordMessage {
+  width: auto;
+  margin-left: 30px;
+}
+
+.podDiscordFullPage.dark .podInputDiscordChat button {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  margin-left: 30px;
+  height: auto;
+}
+
+.podDiscordFullPage.dark .discordSideBar {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.podDiscordFullPage.dark .discordSideBar .sideBarTitle,
+.podDiscordFullPage.dark .discordSideBar .sideBarTitleMedia {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.dark .podMessageDiscordChat.notmine .podMessageRowDiscordChat .bubble {
+  background: none;
+  color: #2d3047;
+  box-shadow: none;
+  padding: 12px 20px;
+}
+
+.dark .podMessageDiscordChat.mine .podMessageRowDiscordChat .bubble {
+  box-shadow: none;
+  padding: 12px 20px 8px 20px;
+  background: none;
+  max-width: 350px;
+  color: #2d3047;
+  text-align: right;
+}
+
+.dark .podMessageDiscordChatContainer {
+  padding: 8px 0px;
+}
+
+.dark .podMessageRowDiscordChat {
+  align-items: flex-start;
+  /* width: 50%; */
+}
+
+.dark .notmine .podMessageColumnInfoDiscordChat {
+  margin-left: 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .dark .notmine .podMessageColumnInfoDiscordChat {
+    margin-left: 0px;
+  }
+}
+
+.dark .notmine .podMessageRowDiscordChat .userPhoto {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  margin-right: -32px;
+  border: 1.5px solid #ffffff;
+}
+
+.dark .messageDate {
+  width: 100%;
+  margin-bottom: 32px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #1818181a;
+  padding-bottom: 16px;
+  color: #707582;
+  font-size: 14px;
+}
+
+.dark .podMessageColumnInfoDiscordChat .actionsRow {
+  margin-left: 10px;
+  z-index: 1;
+  /* margin-bottom: -25px;
+  margin-top: -6.5px; */
+  background-color: #b1b1b1;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: white;
+}
+.dark .podMessageRowInfoDiscordChat .actionsRow svg {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.dark .sideBarUser {
+  cursor: pointer;
+  margin-left: -8px;
+}
+.dark .sideBarUser:first-child {
+  margin-left: 0;
+}
+.dark .sideBarUserImg {
+  width: 32px;
+  height: 32px;
+  background-color: #5a5a5a;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark .sideBarMediaItem,
+.dark .sideBarMediaItemNoFlex {
+  width: 60px;
+  height: 80px;
+  border-radius: 0px;
+  margin: 10px;
+  background-color: #707582;
+}
+
+.dark .sideBarMediaItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .sideBarMediaItem img {
+  width: 14px !important;
+  height: auto !important;
+}
+
+.dark .sideBarMediaItemNoFlex img {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.dark .sideBarMediaItemNoFlex .sideBarVideoIcon {
+  z-index: 1;
+  width: 60px;
+  height: 80px;
+  min-height: 80px;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(-80px);
+}
+
+.dark .sideBarMediaItemNoFlex .sideBarVideoIcon > div {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.dark .sideBarViewAll {
+  color: white !important;
+}

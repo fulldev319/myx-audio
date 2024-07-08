@@ -1,0 +1,153 @@
+{
+  "Polygon": {
+    "CONTRACT_ADDRESSES": {
+      "MEDIA_MANAGER": "",
+      "pDAI": "",
+      "pUSDT": "",
+      "PRIVIERC721": "",
+      "ERC20_TOKEN_EXCHANGE": "",
+      "ERC721_TOKEN_EXCHANGE": "",
+      "ERC1155_TOKEN_EXCHANGE": "",
+      "ERC721_AUCTION": "",
+      "TRAX_TOKEN": "",
+      "YIELD": "",
+      "ERC721_COLLATRALISE_AUCTION": "",
+      "ERC20_TEST_TOKEN": "",
+      "SONGS_MANAGER": "",
+      "ERC721_VAULT_FACTORY": "",
+
+      "COPYRIGHT_TOKEN": "0x23c3F23f02c644B5e7B5feE598300C123dDe5d9C",
+      "STAKING_GOVERNANCE": "0x85be0F7E26a26222c52417573210d6f152261554",
+      "STAKING_ERC721": "0x5A2B57ef759af8Cf9A16dC09E2894438ADE2A366",
+      "COPYRIGHT_NFT": "0xb83Fbe7dbb06951D0C60AEa53a75363C28360fe2",
+      "DISTRIBUTION_MANAGER": "0x711299271c2D083fedA5386255B83Ecd111eaAAC",
+      "POD_WITHDRAW_MANAGER": "0x207934Fd909Af83CA79A444620675Aa8f30ffFa7",
+      "CREATION_MANAGER": "0xE55f8f5b7D174809d547d15a8821141632ebc31C",
+      "POD_MANAGER": "0xA49697fc4De81d2E34A89b38D8aB5d843E929fCe",
+      "POD_MANAGER_V2": "0x0bdB0369519B9Bc88Fd3422De1ABf660cC90B696",
+      "MEDIA_MANAGER_V2": "0xE7BdceB2813650f9322f57fec629f5977B7bF7DD",
+
+      "OPEN_SALES_MANAGER": "0x98E4218AeC1896a1d66479B2ca0743bB30cdDB6e",
+      "OPEN_SALES_MANAGER_1155": "0x801B970d0122af9D57d58bfD71A85F4F6774D52c",
+      "RevenueOracle": "",
+      "ProtocolParameters": "",
+      "FundsManager": "",
+      "Subscription": "",
+      "SubscriptionReward": "",
+      "Song": "",
+      "SongBeacon": "",
+      "SongsCollection": "",
+      "SongsRouter": "",
+
+      "ROYALTY_FACTORY": "0x37611C271512d1C2c141f267088F90A98B89863A",
+      "ROYALTY_FACTORY_1155": "",
+
+      "SOCIAL_TOKEN_DEPLOYER": ""
+    },
+    "TOKEN_ADDRESSES": {
+      "USDT": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+      "USDC": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+      "WETH": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619"
+    }
+  },
+  "Ethereum": {
+    "CONTRACT_ADDRESSES": {
+      "MEDIA_MANAGER": "",
+      "pDAI": "",
+      "pUSDT": "",
+      "PRIVIERC721": "",
+      "ERC20_TOKEN_EXCHANGE": "",
+      "ERC721_TOKEN_EXCHANGE": "",
+      "ERC1155_TOKEN_EXCHANGE": "",
+      "ERC721_AUCTION": "",
+      "TRAX_TOKEN": "",
+      "YIELD": "",
+      "ERC721_COLLATRALISE_AUCTION": "",
+      "ERC20_TEST_TOKEN": "",
+      "SONGS_MANAGER": "",
+      "ERC721_VAULT_FACTORY": "",
+
+      "COPYRIGHT_TOKEN": "",
+      "STAKING_GOVERNANCE": "",
+      "STAKING_ERC721": "",
+      "COPYRIGHT_NFT": "",
+      "DISTRIBUTION_MANAGER": "",
+      "POD_WITHDRAW_MANAGER": "",
+      "GOVERNANCE": "",
+      "CREATION_MANAGER": "",
+      "POD_MANAGER": "",
+
+      "OPEN_SALES_MANAGER": "0x03408eD83A6dF3d461020f0B47910443260AC31D",
+      "OPEN_SALES_MANAGER_1155": "",
+      "RevenueOracle": "",
+      "ProtocolParameters": "",
+      "FundsManager": "",
+      "Subscription": "",
+      "SubscriptionReward": "",
+      "Song": "",
+      "SongBeacon": "",
+      "SongsCollection": "",
+      "SongsRouter": "",
+
+      "ROYALTY_FACTORY": "",
+      "ROYALTY_FACTORY_1155": "",
+
+      "SOCIAL_TOKEN_DEPLOYER": ""
+    },
+    "TOKEN_ADDRESSES": {
+      "USDT": "",
+      "USDC": "",
+      "WETH": ""
+    }
+  },
+  "Binance": {
+    "CONTRACT_ADDRESSES": {
+      "MEDIA_MANAGER": "",
+      "pDAI": "",
+      "pUSDT": "",
+      "PRIVIERC721": "",
+      "ERC20_TOKEN_EXCHANGE": "",
+      "ERC721_TOKEN_EXCHANGE": "",
+      "ERC1155_TOKEN_EXCHANGE": "",
+      "ERC721_AUCTION": "",
+      "TRAX_TOKEN": "",
+      "YIELD": "",
+      "ERC721_COLLATRALISE_AUCTION": "",
+      "ERC20_TEST_TOKEN": "",
+      "SONGS_MANAGER": "",
+      "ERC721_VAULT_FACTORY": "",
+
+      "COPYRIGHT_TOKEN": "",
+      "STAKING_GOVERNANCE": "",
+      "STAKING_ERC721": "",
+      "COPYRIGHT_NFT": "",
+      "DISTRIBUTION_MANAGER": "",
+      "POD_WITHDRAW_MANAGER": "",
+      "GOVERNANCE": "",
+      "CREATION_MANAGER": "",
+      "POD_MANAGER": "",
+
+      "OPEN_SALES_MANAGER": "",
+      "OPEN_SALES_MANAGER_1155": "",
+      "RevenueOracle": "",
+      "ProtocolParameters": "",
+      "FundsManager": "",
+      "Subscription": "",
+      "SubscriptionReward": "",
+      "Song": "",
+      "SongBeacon": "",
+      "SongsCollection": "",
+      "SongsRouter": "",
+
+      "ROYALTY_FACTORY": "",
+      "ROYALTY_FACTORY_1155": "",
+
+      "SOCIAL_TOKEN_DEPLOYER": ""
+    },
+    "TOKEN_ADDRESSES": {
+      "USDT": "",
+      "USDC": "",
+      "WETH": ""
+    }
+  }
+}

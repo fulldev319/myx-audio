@@ -1,0 +1,1706 @@
+{
+  "contractName": "IERC721WithRoyalty",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        }
+      ],
+      "name": "DefaultRoyaltySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenRoyaltyRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "bps",
+          "type": "uint16"
+        }
+      ],
+      "name": "TokenRoyaltySet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "bps",
+              "type": "uint16"
+            }
+          ],
+          "internalType": "struct IERC721WithRoyalty.TokenRoyaltyConfig[]",
+          "name": "royalties",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setTokenRoyalties",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTokenRoyaltiesCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTokenRoyaltyByIndex",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "bps",
+              "type": "uint16"
+            }
+          ],
+          "internalType": "struct IERC721WithRoyalty.TokenRoyaltyConfig",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "bps",
+              "type": "uint16"
+            }
+          ],
+          "internalType": "struct IERC721WithRoyalty.TokenRoyalty",
+          "name": "royalty",
+          "type": "tuple"
+        }
+      ],
+      "name": "setDefaultRoyalty",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"bps\",\"type\":\"uint16\"}],\"name\":\"DefaultRoyaltySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"TokenRoyaltyRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint16\",\"name\":\"bps\",\"type\":\"uint16\"}],\"name\":\"TokenRoyaltySet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getTokenRoyaltiesCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getTokenRoyaltyByIndex\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"bps\",\"type\":\"uint16\"}],\"internalType\":\"struct IERC721WithRoyalty.TokenRoyaltyConfig\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"bps\",\"type\":\"uint16\"}],\"internalType\":\"struct IERC721WithRoyalty.TokenRoyalty\",\"name\":\"royalty\",\"type\":\"tuple\"}],\"name\":\"setDefaultRoyalty\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"bps\",\"type\":\"uint16\"}],\"internalType\":\"struct IERC721WithRoyalty.TokenRoyaltyConfig[]\",\"name\":\"royalties\",\"type\":\"tuple[]\"}],\"name\":\"setTokenRoyalties\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getTokenRoyaltiesCount()\":{\"details\":\"Get the number of token specific overrides.  Used to enumerate over all configurations\"},\"getTokenRoyaltyByIndex(uint256)\":{\"details\":\"Get a token royalty configuration by index.  Use in conjunction with getTokenRoyaltiesCount to get all per token configurations\"},\"setDefaultRoyalty((address,uint16))\":{\"details\":\"Set a default royalty configuration.  Will be used if no token specific configuration is set\"},\"setTokenRoyalties((uint256,address,uint16)[])\":{\"details\":\"Set per token royalties.  Passing a recipient of address(0) will delete any existing configuration\"},\"supportsInterface(bytes4)\":{\"details\":\"Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/implementations/ERC721Royalty/IERC721WithRoyalty.sol\":\"IERC721WithRoyalty\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6\",\"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx\"]},\"project:/contracts/implementations/ERC721Royalty/IERC721WithRoyalty.sol\":{\"keccak256\":\"0xa30fe7ca74d0737509d4d682c87ee569332fdb101fd8fa3d4b75c1235e841ff5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0ba032d1f532d05900b331db78cd381ba9b8d0abe03b036d9175ecf6588d5d09\",\"dweb:/ipfs/QmcsktffKxcBNVcFuD4TtdqA9J6C1eExqxJoFpW3BY3ruN\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/// @author: manifold.xyz\n\nimport \"@openzeppelin/contracts/utils/introspection/IERC165.sol\";\n\ninterface IERC721WithRoyalty is IERC165 {\n    event TokenRoyaltyRemoved(uint256 tokenId);\n    event TokenRoyaltySet(uint256 tokenId, address recipient, uint16 bps);\n    event DefaultRoyaltySet(address recipient, uint16 bps);\n\n    struct TokenRoyalty {\n        address recipient;\n        uint16 bps;\n    }\n\n    struct TokenRoyaltyConfig {\n        uint256 tokenId;\n        address recipient;\n        uint16 bps;\n    }\n\n    /**\n     * @dev Set per token royalties.  Passing a recipient of address(0) will delete any existing configuration\n     */\n    function setTokenRoyalties(TokenRoyaltyConfig[] calldata royalties)\n        external;\n\n    /**\n     * @dev Get the number of token specific overrides.  Used to enumerate over all configurations\n     */\n    function getTokenRoyaltiesCount() external view returns (uint256);\n\n    /**\n     * @dev Get a token royalty configuration by index.  Use in conjunction with getTokenRoyaltiesCount to get all per token configurations\n     */\n    function getTokenRoyaltyByIndex(uint256 index)\n        external\n        view\n        returns (TokenRoyaltyConfig memory);\n\n    /**\n     * @dev Set a default royalty configuration.  Will be used if no token specific configuration is set\n     */\n    function setDefaultRoyalty(TokenRoyalty calldata royalty) external;\n}\n",
+  "sourcePath": "/Users/angelsatorresalmenara/Desktop/privi-pods-smart-contract/contracts/implementations/ERC721Royalty/IERC721WithRoyalty.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/implementations/ERC721Royalty/IERC721WithRoyalty.sol",
+    "exportedSymbols": {
+      "IERC165": [7962],
+      "IERC721WithRoyalty": [13751]
+    },
+    "id": 13752,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13687,
+        "literals": ["solidity", "^", "0.8", ".0"],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:59"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "id": 13688,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 13752,
+        "sourceUnit": 7963,
+        "src": "85:65:59",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 13689,
+              "name": "IERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7962,
+              "src": "184:7:59"
+            },
+            "id": 13690,
+            "nodeType": "InheritanceSpecifier",
+            "src": "184:7:59"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 13751,
+        "linearizedBaseContracts": [13751, 7962],
+        "name": "IERC721WithRoyalty",
+        "nameLocation": "162:18:59",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 13694,
+            "name": "TokenRoyaltyRemoved",
+            "nameLocation": "204:19:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13693,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13692,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "232:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13694,
+                  "src": "224:15:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13691,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:17:59"
+            },
+            "src": "198:43:59"
+          },
+          {
+            "anonymous": false,
+            "id": 13702,
+            "name": "TokenRoyaltySet",
+            "nameLocation": "252:15:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13696,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "276:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "268:15:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13695,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "268:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13698,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "293:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "285:17:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13697,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:59",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13700,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "bps",
+                  "nameLocation": "311:3:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "304:10:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 13699,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "267:48:59"
+            },
+            "src": "246:70:59"
+          },
+          {
+            "anonymous": false,
+            "id": 13708,
+            "name": "DefaultRoyaltySet",
+            "nameLocation": "327:17:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13707,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13704,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "353:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13708,
+                  "src": "345:17:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13703,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:7:59",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13706,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "bps",
+                  "nameLocation": "371:3:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13708,
+                  "src": "364:10:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 13705,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "364:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:31:59"
+            },
+            "src": "321:55:59"
+          },
+          {
+            "canonicalName": "IERC721WithRoyalty.TokenRoyalty",
+            "id": 13713,
+            "members": [
+              {
+                "constant": false,
+                "id": 13710,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "420:9:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13713,
+                "src": "412:17:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13709,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "412:7:59",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13712,
+                "mutability": "mutable",
+                "name": "bps",
+                "nameLocation": "446:3:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13713,
+                "src": "439:10:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 13711,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "439:6:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "TokenRoyalty",
+            "nameLocation": "389:12:59",
+            "nodeType": "StructDefinition",
+            "scope": 13751,
+            "src": "382:74:59",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IERC721WithRoyalty.TokenRoyaltyConfig",
+            "id": 13720,
+            "members": [
+              {
+                "constant": false,
+                "id": 13715,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "506:7:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "498:15:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13714,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "498:7:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13717,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "531:9:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "523:17:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13716,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "523:7:59",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13719,
+                "mutability": "mutable",
+                "name": "bps",
+                "nameLocation": "557:3:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "550:10:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 13718,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "550:6:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "TokenRoyaltyConfig",
+            "nameLocation": "469:18:59",
+            "nodeType": "StructDefinition",
+            "scope": 13751,
+            "src": "462:105:59",
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 13721,
+              "nodeType": "StructuredDocumentation",
+              "src": "573:122:59",
+              "text": " @dev Set per token royalties.  Passing a recipient of address(0) will delete any existing configuration"
+            },
+            "functionSelector": "5136dcc7",
+            "id": 13728,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTokenRoyalties",
+            "nameLocation": "709:17:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13725,
+                  "mutability": "mutable",
+                  "name": "royalties",
+                  "nameLocation": "757:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13728,
+                  "src": "727:39:59",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_TokenRoyaltyConfig_$13720_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 13723,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 13722,
+                        "name": "TokenRoyaltyConfig",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 13720,
+                        "src": "727:18:59"
+                      },
+                      "referencedDeclaration": 13720,
+                      "src": "727:18:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_storage_ptr",
+                        "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                      }
+                    },
+                    "id": 13724,
+                    "nodeType": "ArrayTypeName",
+                    "src": "727:20:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_TokenRoyaltyConfig_$13720_storage_$dyn_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:41:59"
+            },
+            "returnParameters": {
+              "id": 13727,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "784:0:59"
+            },
+            "scope": 13751,
+            "src": "700:85:59",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13729,
+              "nodeType": "StructuredDocumentation",
+              "src": "791:110:59",
+              "text": " @dev Get the number of token specific overrides.  Used to enumerate over all configurations"
+            },
+            "functionSelector": "7e980342",
+            "id": 13734,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenRoyaltiesCount",
+            "nameLocation": "915:22:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13730,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "937:2:59"
+            },
+            "returnParameters": {
+              "id": 13733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13732,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13734,
+                  "src": "963:7:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13731,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "963:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "962:9:59"
+            },
+            "scope": 13751,
+            "src": "906:66:59",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13735,
+              "nodeType": "StructuredDocumentation",
+              "src": "978:151:59",
+              "text": " @dev Get a token royalty configuration by index.  Use in conjunction with getTokenRoyaltiesCount to get all per token configurations"
+            },
+            "functionSelector": "0653aca5",
+            "id": 13743,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenRoyaltyByIndex",
+            "nameLocation": "1143:22:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13737,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "1174:5:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13743,
+                  "src": "1166:13:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13736,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1166:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1165:15:59"
+            },
+            "returnParameters": {
+              "id": 13742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13741,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13743,
+                  "src": "1228:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_memory_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                  },
+                  "typeName": {
+                    "id": 13740,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13739,
+                      "name": "TokenRoyaltyConfig",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13720,
+                      "src": "1228:18:59"
+                    },
+                    "referencedDeclaration": 13720,
+                    "src": "1228:18:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1227:27:59"
+            },
+            "scope": 13751,
+            "src": "1134:121:59",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13744,
+              "nodeType": "StructuredDocumentation",
+              "src": "1261:116:59",
+              "text": " @dev Set a default royalty configuration.  Will be used if no token specific configuration is set"
+            },
+            "functionSelector": "ef60ceaf",
+            "id": 13750,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDefaultRoyalty",
+            "nameLocation": "1391:17:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13747,
+                  "mutability": "mutable",
+                  "name": "royalty",
+                  "nameLocation": "1431:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13750,
+                  "src": "1409:29:59",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenRoyalty_$13713_calldata_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyalty"
+                  },
+                  "typeName": {
+                    "id": 13746,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13745,
+                      "name": "TokenRoyalty",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13713,
+                      "src": "1409:12:59"
+                    },
+                    "referencedDeclaration": 13713,
+                    "src": "1409:12:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenRoyalty_$13713_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyalty"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1408:31:59"
+            },
+            "returnParameters": {
+              "id": 13749,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1448:0:59"
+            },
+            "scope": 13751,
+            "src": "1382:67:59",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13752,
+        "src": "152:1299:59",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1419:59"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/implementations/ERC721Royalty/IERC721WithRoyalty.sol",
+    "exportedSymbols": {
+      "IERC165": [7962],
+      "IERC721WithRoyalty": [13751]
+    },
+    "id": 13752,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13687,
+        "literals": ["solidity", "^", "0.8", ".0"],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:59"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "id": 13688,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 13752,
+        "sourceUnit": 7963,
+        "src": "85:65:59",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 13689,
+              "name": "IERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7962,
+              "src": "184:7:59"
+            },
+            "id": 13690,
+            "nodeType": "InheritanceSpecifier",
+            "src": "184:7:59"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 13751,
+        "linearizedBaseContracts": [13751, 7962],
+        "name": "IERC721WithRoyalty",
+        "nameLocation": "162:18:59",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 13694,
+            "name": "TokenRoyaltyRemoved",
+            "nameLocation": "204:19:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13693,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13692,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "232:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13694,
+                  "src": "224:15:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13691,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "224:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "223:17:59"
+            },
+            "src": "198:43:59"
+          },
+          {
+            "anonymous": false,
+            "id": 13702,
+            "name": "TokenRoyaltySet",
+            "nameLocation": "252:15:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13701,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13696,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "276:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "268:15:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13695,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "268:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13698,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "293:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "285:17:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13697,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:59",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13700,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "bps",
+                  "nameLocation": "311:3:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13702,
+                  "src": "304:10:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 13699,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "267:48:59"
+            },
+            "src": "246:70:59"
+          },
+          {
+            "anonymous": false,
+            "id": 13708,
+            "name": "DefaultRoyaltySet",
+            "nameLocation": "327:17:59",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13707,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13704,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "353:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13708,
+                  "src": "345:17:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 13703,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "345:7:59",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13706,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "bps",
+                  "nameLocation": "371:3:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13708,
+                  "src": "364:10:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 13705,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "364:6:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "344:31:59"
+            },
+            "src": "321:55:59"
+          },
+          {
+            "canonicalName": "IERC721WithRoyalty.TokenRoyalty",
+            "id": 13713,
+            "members": [
+              {
+                "constant": false,
+                "id": 13710,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "420:9:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13713,
+                "src": "412:17:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13709,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "412:7:59",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13712,
+                "mutability": "mutable",
+                "name": "bps",
+                "nameLocation": "446:3:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13713,
+                "src": "439:10:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 13711,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "439:6:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "TokenRoyalty",
+            "nameLocation": "389:12:59",
+            "nodeType": "StructDefinition",
+            "scope": 13751,
+            "src": "382:74:59",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "IERC721WithRoyalty.TokenRoyaltyConfig",
+            "id": 13720,
+            "members": [
+              {
+                "constant": false,
+                "id": 13715,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "506:7:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "498:15:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13714,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "498:7:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13717,
+                "mutability": "mutable",
+                "name": "recipient",
+                "nameLocation": "531:9:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "523:17:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13716,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "523:7:59",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13719,
+                "mutability": "mutable",
+                "name": "bps",
+                "nameLocation": "557:3:59",
+                "nodeType": "VariableDeclaration",
+                "scope": 13720,
+                "src": "550:10:59",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 13718,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "550:6:59",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "TokenRoyaltyConfig",
+            "nameLocation": "469:18:59",
+            "nodeType": "StructDefinition",
+            "scope": 13751,
+            "src": "462:105:59",
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 13721,
+              "nodeType": "StructuredDocumentation",
+              "src": "573:122:59",
+              "text": " @dev Set per token royalties.  Passing a recipient of address(0) will delete any existing configuration"
+            },
+            "functionSelector": "5136dcc7",
+            "id": 13728,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTokenRoyalties",
+            "nameLocation": "709:17:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13725,
+                  "mutability": "mutable",
+                  "name": "royalties",
+                  "nameLocation": "757:9:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13728,
+                  "src": "727:39:59",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_TokenRoyaltyConfig_$13720_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 13723,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 13722,
+                        "name": "TokenRoyaltyConfig",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 13720,
+                        "src": "727:18:59"
+                      },
+                      "referencedDeclaration": 13720,
+                      "src": "727:18:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_storage_ptr",
+                        "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                      }
+                    },
+                    "id": 13724,
+                    "nodeType": "ArrayTypeName",
+                    "src": "727:20:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_TokenRoyaltyConfig_$13720_storage_$dyn_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "726:41:59"
+            },
+            "returnParameters": {
+              "id": 13727,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "784:0:59"
+            },
+            "scope": 13751,
+            "src": "700:85:59",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13729,
+              "nodeType": "StructuredDocumentation",
+              "src": "791:110:59",
+              "text": " @dev Get the number of token specific overrides.  Used to enumerate over all configurations"
+            },
+            "functionSelector": "7e980342",
+            "id": 13734,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenRoyaltiesCount",
+            "nameLocation": "915:22:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13730,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "937:2:59"
+            },
+            "returnParameters": {
+              "id": 13733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13732,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13734,
+                  "src": "963:7:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13731,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "963:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "962:9:59"
+            },
+            "scope": 13751,
+            "src": "906:66:59",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13735,
+              "nodeType": "StructuredDocumentation",
+              "src": "978:151:59",
+              "text": " @dev Get a token royalty configuration by index.  Use in conjunction with getTokenRoyaltiesCount to get all per token configurations"
+            },
+            "functionSelector": "0653aca5",
+            "id": 13743,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenRoyaltyByIndex",
+            "nameLocation": "1143:22:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13737,
+                  "mutability": "mutable",
+                  "name": "index",
+                  "nameLocation": "1174:5:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13743,
+                  "src": "1166:13:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13736,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1166:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1165:15:59"
+            },
+            "returnParameters": {
+              "id": 13742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13741,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13743,
+                  "src": "1228:25:59",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_memory_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                  },
+                  "typeName": {
+                    "id": 13740,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13739,
+                      "name": "TokenRoyaltyConfig",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13720,
+                      "src": "1228:18:59"
+                    },
+                    "referencedDeclaration": 13720,
+                    "src": "1228:18:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenRoyaltyConfig_$13720_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyaltyConfig"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1227:27:59"
+            },
+            "scope": 13751,
+            "src": "1134:121:59",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 13744,
+              "nodeType": "StructuredDocumentation",
+              "src": "1261:116:59",
+              "text": " @dev Set a default royalty configuration.  Will be used if no token specific configuration is set"
+            },
+            "functionSelector": "ef60ceaf",
+            "id": 13750,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setDefaultRoyalty",
+            "nameLocation": "1391:17:59",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13748,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13747,
+                  "mutability": "mutable",
+                  "name": "royalty",
+                  "nameLocation": "1431:7:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13750,
+                  "src": "1409:29:59",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TokenRoyalty_$13713_calldata_ptr",
+                    "typeString": "struct IERC721WithRoyalty.TokenRoyalty"
+                  },
+                  "typeName": {
+                    "id": 13746,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13745,
+                      "name": "TokenRoyalty",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13713,
+                      "src": "1409:12:59"
+                    },
+                    "referencedDeclaration": 13713,
+                    "src": "1409:12:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TokenRoyalty_$13713_storage_ptr",
+                      "typeString": "struct IERC721WithRoyalty.TokenRoyalty"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1408:31:59"
+            },
+            "returnParameters": {
+              "id": 13749,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1448:0:59"
+            },
+            "scope": 13751,
+            "src": "1382:67:59",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 13752,
+        "src": "152:1299:59",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1419:59"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.6+commit.11564f7e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-16T21:39:27.723Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getTokenRoyaltiesCount()": {
+        "details": "Get the number of token specific overrides.  Used to enumerate over all configurations"
+      },
+      "getTokenRoyaltyByIndex(uint256)": {
+        "details": "Get a token royalty configuration by index.  Use in conjunction with getTokenRoyaltiesCount to get all per token configurations"
+      },
+      "setDefaultRoyalty((address,uint16))": {
+        "details": "Set a default royalty configuration.  Will be used if no token specific configuration is set"
+      },
+      "setTokenRoyalties((uint256,address,uint16)[])": {
+        "details": "Set per token royalties.  Passing a recipient of address(0) will delete any existing configuration"
+      },
+      "supportsInterface(bytes4)": {
+        "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
